@@ -1,0 +1,48 @@
+.mainReq {
+  display: flex;
+  flex-Direction: column;
+  align-Content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.Reqcredentials {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin:2%;
+  width:50%;
+}
+
+.Reqcredentials label {
+display: flex;
+flex-direction: column;
+align-self: center;
+}
+
+.Reqtext {
+color: rgb(43, 63, 83);
+}
+
+.buttony {
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2%;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: 2px #555555;
+  border-radius: 40px;
+  width: 20%;
+  align-self: center;
+}
+
+.buttony:hover {
+  background-color: #555555;
+  color: white;
+}

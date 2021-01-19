@@ -1,0 +1,112 @@
+/* 
+p,span,
+  .logout {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Ubuntu, Helvetica Neue, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+ 
+  
+  .iconClose {
+    align-self: center;
+  width: 22.5px;
+  height: 22.5px;
+  fill: rgb(29, 161, 242);
+  }
+  .iconSVG {
+    width: 18.75px;
+    height: 18.75px;
+    fill: rgb(136, 153, 166);
+  }
+  .icon4 {
+    width: 26.25px;
+    height: 26.25px;
+    fill: white;
+  }
+  .icon4s {
+    width: 30px;
+    height: 30px;
+    fill: white;
+  }
+  .left-desk {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 402.1px;
+    border-right: 1px solid rgb(56, 68, 77);
+  }
+  .left-desk-p1 {
+    display: flex;
+    flex-direction: column;
+    height: 553px;
+    width: 275px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .left-desk-p2 {
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .left-desk-item {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .left-desk-btn{
+    display: flex;
+    padding: 10px;
+    background: none;
+    border: none;
+    outline: none;
+    border-radius: 9999px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .left-desk-item:hover .left-desk-btn{
+    background-color: #162d40;
+    transition: 0.2ms ease;
+  }
+  .left-desk-item:hover .icon4{
+    fill:#1da1f2;
+    transition: 0.2ms ease;
+  }
+  .left-desk-item:hover .icon4s{
+    fill:#1da1f2;
+    transition: 0.2ms ease;
+  }
+  .left-desk-item:hover .left-desk-text{
+    color:#1da1f2;
+    transition: 0.2ms ease;
+  }
+  .left-desk-text {
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Ubuntu, Helvetica Neue, sans-serif;
+  }
+  .btn {
+    display: flex;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: #162d3f;
+    transition: 0.2s ease-in-out;
+  } */

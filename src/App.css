@@ -1,0 +1,510 @@
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 14px;
+  align-self: center;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  align-self: center;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}  
+input:checked + .slider {
+  background-color: #2196f3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+  display: flex;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */ 
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+} 
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+} 
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+} 
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/*-----------------------------------before is template------------------------------------------*/
+
+
+body {
+  background-color: rgb(21, 32, 43);
+  scrollbar-color: rgb(107, 125, 140) rgb(25, 39, 52);
+  display: flex;
+  flex-direction: row;
+}
+p,span,
+.logout {
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Ubuntu, Helvetica Neue, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+
+.iconClose {
+  align-self: center;
+  width: 22.5px;
+  height: 22.5px;
+  fill: rgb(29, 161, 242);
+}
+.iconSVG {
+  width: 18.75px;
+  height: 18.75px;
+  fill: rgb(136, 153, 166);
+}
+.icon4 {
+  width: 26.25px;
+  height: 26.25px;
+  fill: white;
+}
+.icon4s {
+  width: 30px;
+  height: 30px;
+  fill: white;
+}
+.left-desk {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 402.1px;
+  border-right: 1px solid rgb(56, 68, 77);
+}
+.left-desk-p1 {
+  display: flex;
+  flex-direction: column;
+  height: 553px;
+  width: 275px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.left-desk-p2 {
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.left-desk-item {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.left-desk-btn{
+  display: flex;
+  padding: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 9999px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.left-desk-item:hover .left-desk-btn{
+  background-color: #162d40;
+  transition: 0.2ms ease;
+}
+.left-desk-item:hover .icon4{
+  fill:#1da1f2;
+  transition: 0.2ms ease;
+}
+.left-desk-item:hover .icon4s{
+  fill:#1da1f2;
+  transition: 0.2ms ease;
+}
+.left-desk-item:hover .left-desk-text{
+  color:#1da1f2;
+  transition: 0.2ms ease;
+}
+.left-desk-text {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  Ubuntu, Helvetica Neue, sans-serif;
+}
+.btn {
+  display: flex;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #162d3f;
+  transition: 0.2s ease-in-out;
+}
+
+.sidebar {
+  height: 100vh;
+  width:0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(21, 32, 43);
+  overflow-x: hidden;
+  transition: 250ms ease;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+  font-size: 15px;
+  white-space: nowrap;
+  box-shadow: rgba(136, 153, 166, 0.2) 0px 0px 10px,
+    rgba(136, 153, 166, 0.25) 0px 1px 3px 1px;
+}
+.sideitem {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgb(56, 68, 77);
+}
+
+.sec1 {
+  flex-direction: column;
+  flex-grow: 1;
+}
+.sec1 p {
+  text-align: start;
+}
+.midsec1,
+.midsec2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.midsec1 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.midsec2 {
+  flex-grow: 1;
+}
+.minisecs {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.minisecs:hover {
+  background-color: #192734;
+  transition: 250ms ease;
+}
+.minisecs p,
+.logout {
+  margin-left: 10px;
+  align-self: center;
+}
+.bord {
+  border-bottom: 1px solid rgb(56, 68, 77);
+}
+.logout {
+  margin: 0px;
+}
+.minisecs a {
+  align-self: center;
+}
+.minisec1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.minisec2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding:20px;
+}
+.minisec3 {
+  display: flex;
+  justify-content: flex-start;
+}
+.minisec1 button {
+  border: 1px solid rgb(29, 161, 242);
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  justify-content: center;
+}
+.accountname {
+  font-weight: bold;
+}
+@media screen and (min-width:500px){/* for things you want to appear or disappear on desktop*/
+  .mobile{
+    display: none;
+  }
+}
+@media screen and (max-width:500px){/* for things you want to appear on mobile*/
+  .desktop{
+    display: none;
+  }
+}

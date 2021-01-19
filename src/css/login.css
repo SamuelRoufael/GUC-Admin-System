@@ -1,0 +1,73 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: white;
+  border-radius: 10px;
+  width: 33%;
+}
+.login_view{
+background-image:linear-gradient(black,red,yellow);
+display: flex;
+flex-direction: row;
+width: 100%;
+height:100vh;
+justify-content: center;
+}
+.head p {
+font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  Ubuntu, Helvetica Neue, sans-serif;
+font-size: 40px;
+color: rgb(43, 63, 83);
+text-align: center;
+}
+.credentials{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width:50%;
+}
+.credentials label {
+display: flex;
+flex-direction: column;
+align-self: center;
+}
+.text {
+color: rgb(43, 63, 83);
+}
+
+
+/* Full-width inputs */
+.input_name, .input_pass {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  outline: none;
+  display: inline-block;
+  border: 1px solid yellow;
+  border-radius: 999px;
+  box-sizing: border-box;
+}
+.input_pass{
+  border: 1px solid red;
+}
+
+/* Set a style for all buttons */
+.login_submit {
+background:black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+.login_submit:hover {
+  opacity: 0.8;
+}

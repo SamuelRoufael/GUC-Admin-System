@@ -1,0 +1,8 @@
+.assign_Coor ,.assign_aca{
+    display:flex;
+    justify-content: space-around;
+  }
+  .assign_coor_alert, .assign_aca_alert{
+    margin-top: 30px;
+    display: flex;
+  }

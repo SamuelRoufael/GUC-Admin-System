@@ -1,0 +1,19 @@
+.mobile_btn{
+    display: flex;
+    padding: 10px;
+    background: none;
+    border: none;
+    outline: none;
+    justify-content:start;
+    cursor: pointer;
+}
+  .mobile_icon4s {
+    width: 30px;
+    height: 30px;
+}
+.mobile {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}

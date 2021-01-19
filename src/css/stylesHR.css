@@ -1,0 +1,21 @@
+.component-containerHR {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.text-HeaderHR{
+    text-align: center;
+    border-top : 2px black solid;
+    border-bottom :2px black solid;
+    padding : 1%; 
+    margin: 1%;
+}
+
+.alerts{
+    margin: 10px;
+}
+
